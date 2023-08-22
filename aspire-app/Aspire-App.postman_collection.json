@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "9a1dfbb1-e086-49aa-92f7-1c39653d23fe",
+		"name": "Aspire-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3761079"
+	},
+	"item": [
+		{
+			"name": "Create Loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "terms",
+							"value": "11",
+							"type": "default"
+						},
+						{
+							"key": "amount",
+							"value": "10009",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/loans/create/customer001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loans",
+						"create",
+						"customer001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "amount",
+							"value": "5217",
+							"type": "default"
+						},
+						{
+							"key": "customerId",
+							"value": "customer001",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/loans/makePayment/52043972-0487-413a-8cf9-d76e4c88683c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loans",
+						"makePayment",
+						"52043972-0487-413a-8cf9-d76e4c88683c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin001",
+							"type": "default"
+						},
+						{
+							"key": "token",
+							"value": "gargantua",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/approve/52043972-0487-413a-8cf9-d76e4c88683c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"approve",
+						"52043972-0487-413a-8cf9-d76e4c88683c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Loans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/loans/view/customer001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loans",
+						"view",
+						"customer001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
